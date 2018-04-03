@@ -9,13 +9,10 @@ func main() {
 	cards := newDeck()
 
 	//cards.print()
-	hand, remaining := deal(cards, 2)
-	hand.print()
-	fmt.Println("=========")
-	remaining.print()
-
-}
-
-func newCard() string {
-	return "Five of Diamonds"
+	//cards.saveToFile("my_card")
+	cards = newDeckFromFile("my_card")
+	fmt.Println("--------------")
+	for _, v := range cards {
+		fmt.Println(v)
+	}
 }
